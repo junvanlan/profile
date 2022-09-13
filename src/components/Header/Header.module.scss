@@ -2,6 +2,10 @@
     width: 100%;
     height: var(--header-height);
     background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .inner {
@@ -28,7 +32,7 @@
 .action {
     display: flex;
     align-items: center;
-    @media (max-width: 767px) {
+    @media (max-width: 760px) {
         .action-btn {
             display: none;
         }
