@@ -1,0 +1,21 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--pages-bg);
+}
+
+.inner {
+    max-width: 1200px;
+    padding-top: var(--header-height);
+}
+
+.header {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.sub-header {
+    font-size: 2.2rem;
+    opacity: 0.8;
+}
