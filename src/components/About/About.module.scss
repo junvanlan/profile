@@ -3,7 +3,9 @@
     height: 100vh;
     background-image: url('/assets/img/lan.jpg');
     background-size: cover;
-    background-position-y: -20px;
+    background-position-y: var(--header-height);
+    background-position-x: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
 }
@@ -63,24 +65,103 @@
     bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
-    height: 40px;
-    min-width: 400px;
-    text-decoration: none;
-    background-color: #3b00ff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 6px;
-    cursor: pointer;
-    &:hover {
-        background-color: #b8a5f6;
-    }
+    height: 60px;
 }
 
+
+/*
 .download-btn {
     color: var(--header-title-color);
     font-size: 2.4rem;
     &:hover {
         color: var(--header-title-color);
     }
+}*/
+
+@mixin transition( $property: all,
+$duration: 0.45s,
+$ease: cubic-bezier(0.65, 0, 0.076, 1)) {
+    transition: $property $duration $ease;
+}
+
+.download-btn {
+    width: 25rem;
+    height: auto;
+    &:hover {
+        .circle {
+            width: 100%;
+            .icon {
+                &.arrow {
+                    background: var(--white);
+                    transform: translate(1rem, 0);
+                }
+            }
+        }
+        .button-text {
+            color: var(--white);
+        }
+    }
+}
+
+.circle {
+    @include transition(all,
+    0.45s,
+    cubic-bezier(0.65, 0, 0.076, 1));
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 4rem;
+    height: 4rem;
+    background: var(--black);
+    border-radius: 999px;
+}
+
+.icon {
+    @include transition(all,
+    0.45s,
+    cubic-bezier(0.65, 0, 0.076, 1));
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: var(--white);
+}
+
+.arrow {
+    @include transition(all,
+    0.45s,
+    cubic-bezier(0.65, 0, 0.076, 1));
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+    &::before {
+        position: absolute;
+        content: '';
+        top: -0.25rem;
+        right: -0.5rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+    }
+}
+
+.button-text {
+    @include transition(all,
+    0.45s,
+    cubic-bezier(0.65, 0, 0.076, 1));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: var(--black);
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
 }

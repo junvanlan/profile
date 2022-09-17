@@ -1,0 +1,37 @@
+.text-wrapper {
+    height: 40px;
+    text-align: left;
+    font-size: 2rem;
+    padding-left: 12px;
+    .tilte {
+        font-weight: 500;
+        color: #ff6f6f;
+    }
+    .value {
+        font-weight: 500;
+    }
+}
+
+.btn-wrapper {
+    height: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 2rem;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    text-decoration: none;
+    border-radius: 999px;
+    border: none;
+    display: block;
+    transition: all 0.4s ease-in-out;
+    background-image: linear-gradient( to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+    &:hover {
+        transform: translateY(-2px);
+        transition-duration: 0.2s;
+    }
+    .tilte {
+        font-weight: 500;
+        color: #fff;
+    }
+}

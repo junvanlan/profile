@@ -20,7 +20,12 @@ function About() {
         </div>
 
         <a className={cx('download-wrapper')} href={imgs.cv}>
-          <div className={cx('download-btn')}>Download My CV</div>
+          <div className={cx('download-btn')}>
+            <span className={cx('circle')} aria-hidden="true">
+              <span className={cx('icon', 'arrow')}></span>
+            </span>
+            <span className={cx('button-text')}>Download my CV</span>
+          </div>
         </a>
       </div>
     </div>

@@ -1,29 +1,69 @@
 import classNames from 'classnames/bind';
 import styles from './Contact.module.scss';
 
+import ContactBtn from '../ContactBtn';
+
 const cx = classNames.bind(styles);
 
 function Contact() {
-  const textContacts = [
-    {
-      title: 'Gmail',
-    },
-  ];
+  const Contacts = {
+    textContacts: [
+      {
+        title: 'Gmail',
+        value: 'junvanlan@gmail.com',
+        type: 'text',
+        used: true,
+      },
+      {
+        title: 'Zalo',
+        value: '0376572311',
+        type: 'text',
+        used: true,
+      },
+      {
+        title: 'Phone',
+        value: '+84 376 572 311',
+        type: 'text',
+        used: true,
+      },
+    ],
+
+    btnContacts: [
+      {
+        title: 'Facebook',
+        value: 'http://facebook.com/junvanlan',
+        type: 'button',
+        used: true,
+      },
+      {
+        title: 'Instagram',
+        value: null,
+        type: 'button',
+        used: false,
+      },
+      {
+        title: 'Twitter ',
+        value: null,
+        type: 'button',
+        used: false,
+      },
+    ],
+  };
   return (
     <div id="contact" className={cx('wrapper')}>
       <h2 className={cx('title')}>Contact</h2>
-      <p> You can contact to my by some ways</p>
+      <p className={cx('description')}> You can contact to me by some ways</p>
       <div className="container">
         <div className="row">
-          <div className="col-md-6">
-            <div className={cx('gmail')}>Gmail: junvanlan@gmail.com</div>
-            <div className={cx('zalo')}>Zalo: 0376572311</div>
-            <div className={cx('phone')}>Phone: +84376572311</div>
+          <div className={cx('col-md-6', 'contact-col')}>
+            {Contacts.textContacts.map((contact, index) => (
+              <ContactBtn key={index} data={contact} />
+            ))}
           </div>
-          <div className="col-md-6">
-            <div>Facebook</div>
-            <div>Instagram</div>
-            <div>twinter</div>
+          <div className={cx('col-md-6', 'contact-col')}>
+            {Contacts.btnContacts.map((contact, index) => (
+              <ContactBtn key={index} data={contact} />
+            ))}
           </div>
         </div>
       </div>
