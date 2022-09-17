@@ -10,7 +10,7 @@ function Pages() {
       <div className={cx('inner')}>
         <div className={cx('header')}>My Pages</div>
         <p className={cx('sub-header')}>
-          This is my pages, written by ReactJs and bootstrap
+          This is my websites, written by ReactJs and bootstrap
         </p>
 
         <div className="container">
