@@ -5,7 +5,7 @@ const cx = classNames.bind(styles);
 
 function PageItem() {
   return (
-    <div className={cx('wrapper')}>
+    <a className={cx('wrapper')} href="/" target="_blank">
       <div className={cx('picture')}>
         <div className={cx('infomation')}>
           <div className={cx('title')}>The Band</div>
@@ -16,7 +16,7 @@ function PageItem() {
         This is the page of a band, that name is The Band, include infomation
         about member, tour, address ...
       </p>
-    </div>
+    </a>
   );
 }
 

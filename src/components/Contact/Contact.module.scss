@@ -1,5 +1,6 @@
 .wrapper {
-    margin-top: var(--header-height);
+    padding-top: var(--header-height);
+    background-color: #e5fae7;
 }
 
 .title {
@@ -11,6 +12,7 @@
     font-size: 2.2rem;
     opacity: 0.8;
     margin-bottom: 32px;
+    padding: 0 8px;
 }
 
 .contact-col {

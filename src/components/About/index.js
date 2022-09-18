@@ -19,7 +19,12 @@ function About() {
           </div>
         </div>
 
-        <a className={cx('download-wrapper')} href={imgs.cv}>
+        <a
+          className={cx('download-wrapper')}
+          href={imgs.cv}
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className={cx('download-btn')}>
             <span className={cx('circle')} aria-hidden="true">
               <span className={cx('icon', 'arrow')}></span>

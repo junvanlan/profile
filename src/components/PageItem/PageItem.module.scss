@@ -1,6 +1,19 @@
 .wrapper {
     display: block;
     padding: 24px 0;
+    text-decoration: none;
+    color: var(--black);
+    &:hover {
+        .picture {
+            transform: translateY(-4px);
+            transition-duration: 0.3s;
+            color: var(--black);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.7);
+        }
+    }
+    .description {
+        color: var(--black);
+    }
 }
 
 .picture {

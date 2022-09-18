@@ -10,7 +10,7 @@ function Contact() {
     textContacts: [
       {
         title: 'Gmail',
-        value: 'junvanlan@gmail.com',
+        value: 'lan.ngx1993@gmail.com',
         type: 'text',
         used: true,
       },

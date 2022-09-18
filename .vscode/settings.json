@@ -1,4 +1,13 @@
 {
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-} 
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "auto-correct.dictionary": [
+    {
+      "languages": ["javascript", "css", "html"],
+      "words": {
+        "backgorund": "background",
+        "cls": "className={cx('')}"
+      }
+    }
+  ]
+}
