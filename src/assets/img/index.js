@@ -4,5 +4,7 @@ const imgs = {
   facebook: require('./facebook.png'),
   email: require('./email.png'),
   cv: require('~/assets/cv/CV.pdf'),
+  theband: require('./theband.jpg'),
+  reactjs: require('./Reactjs.jpeg'),
 };
 export default imgs;

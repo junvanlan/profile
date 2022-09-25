@@ -3,19 +3,22 @@ import styles from './PageItem.module.scss';
 
 const cx = classNames.bind(styles);
 
-function PageItem() {
+function PageItem({ data }) {
   return (
-    <a className={cx('wrapper')} href="/" target="_blank">
+    <a
+      className={cx('wrapper')}
+      href={data.link}
+      target="_blank"
+      rel="noreferrer"
+    >
       <div className={cx('picture')}>
+        <img className={cx('page-img')} src={data.img} alt="" />
         <div className={cx('infomation')}>
-          <div className={cx('title')}>The Band</div>
-          <div className={cx('sub-title')}>ReactJS & Bootstrap</div>
+          <div className={cx('title')}>{data.title}</div>
+          <p className={cx('sub-title')}>{data.subTitle}</p>
         </div>
       </div>
-      <p className={cx('description')}>
-        This is the page of a band, that name is The Band, include infomation
-        about member, tour, address ...
-      </p>
+      <p className={cx('description')}>{data.description}</p>
     </a>
   );
 }
